@@ -24,7 +24,6 @@ for a in soup.findAll(attrs={'class': 'bl-flex-item mb-8'}):
     if rating is not None:
         ratings.append(rating.text.strip())
     link.append(lnk.a.get('href'))
-    print(lnk)
 
 df = pd.DataFrame([products, prices, ratings,link]).transpose()
 df.columns = ['Produk', 'Harga', 'Total Rating','Link Produk']
